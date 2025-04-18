@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ChatZone</string>
+    <string name="tag_line">\@khalil Ben Anane</string>
+    <string name="welcome">Salut ! 👋 Bienvenue sur ChatZone.</string>
+    <string name="description">Connectez-vous sans Internet, simplement  🔐</string>
+
+    <string name="username">username</string>
+    <string name="login">Login</string>
+    <string name="send">Envoyer</string>
+    <string name="message_box">Message Box</string>
+    <string name="instructions_de_d_marrage">✅ Instructions de démarrage</string>
+    <string name="_1_connectez_vous_un_r_seau_wi_fi_lan_n2_lancez_l_application_c_t_serveur_n_assurez_vous_que_votre_appareil_et_le_serveur_sont_connect_s_au_m_me_r_seau_local">1. Connectez-vous à un réseau Wi-Fi (LAN).\n2. Lancez l\'application côté serveur.\nℹ️ Assurez-vous que votre appareil et le serveur sont connectés au même réseau local.</string>
+    <string name="entrez_un_message">Entrez un message</string>
+</resources>

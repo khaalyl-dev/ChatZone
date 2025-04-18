@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Déclaration de la mise en page principale utilisant ConstraintLayout -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Image en haut de l'écran servant d'en-tête visuel -->
+    <ImageView
+        android:id="@+id/imageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- Superposition transparente pour assombrir ou styliser l'en-tête -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/header_layer"
+        app:layout_constraintBottom_toBottomOf="@+id/imageHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!-- Zone de texte affichée au-dessus de l'en-tête avec le nom et le slogan de l'application -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <!-- Nom de l'application -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!-- Slogan de l'application -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag_line"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Point d'ancrage invisible pour séparer l'en-tête du reste de la mise en page -->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:id="@+id/viewSupporter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/imageHeader"
+        android:layout_marginBottom="30dp"
+        />
+
+    <!-- Bloc principal du formulaire de connexion -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/login_background"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/viewSupporter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <!-- Message de bienvenue -->
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/colorTextPrimary"/>
+
+        <!-- Champ de saisie pour le nom d'utilisateur -->
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            android:text="@string/description"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <!-- Champ de texte pour entrer le nom d'utilisateur -->
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/username"
+            android:layout_marginTop="50dp"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:paddingStart="60dp"
+            android:paddingEnd="10dp"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="15sp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:ignore="Autofill"
+            tools:layout_editor_absoluteX="40dp" />
+
+        <!-- Ligne de séparation sous le champ de texte -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorTextHint"
+            android:id="@+id/viewDividerForUsername"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintTop_toBottomOf="@id/usernameEditText" />
+
+        <!-- Icône représentant l'utilisateur à côté du champ -->
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_username"
+            app:layout_constraintBottom_toBottomOf="@id/usernameEditText"
+            app:layout_constraintStart_toStartOf="@id/usernameEditText"
+            app:tint="@color/colorTextHint"
+            />
+
+        <!-- Bouton de connexion -->
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/primary_button_background"
+            android:textColor="@color/colorWhite"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:text="@string/login"
+            app:layout_constraintTop_toBottomOf="@id/viewDividerForUsername"/>
+
+        <!-- Bloc de texte : Instructions de démarrage -->
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/instructions_de_d_marrage"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sendButton" />
+
+        <!-- Instructions détaillées -->
+        <TextView
+            android:id="@+id/textInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/_1_connectez_vous_un_r_seau_wi_fi_lan_n2_lancez_l_application_c_t_serveur_n_assurez_vous_que_votre_appareil_et_le_serveur_sont_connect_s_au_m_me_r_seau_local"
+            android:textColor="@color/colorTextPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

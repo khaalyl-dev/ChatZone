@@ -1,0 +1,66 @@
+<!-- res/layout/chat_message_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/messageContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="start">
+
+    <!-- Header: User Icon + Username -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <!-- User Icon -->
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_user" />
+
+        <!-- Username -->
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="14sp"
+            android:textColor="#888888"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Message Text -->
+    <TextView
+        android:id="@+id/messageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/message_background_received"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Image Message -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone" />
+
+    <!-- Timestamp -->
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12:45 PM"
+        android:textSize="12sp"
+        android:textColor="#888888" />
+
+</LinearLayout>
