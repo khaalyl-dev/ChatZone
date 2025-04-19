@@ -57,12 +57,12 @@ ChatZone/
 
 ### 🖥️ Server Setup
 
-1. Go to the `server/` folder.  
+1. Go to the `UDPChatServer/` folder.  
 2. Compile and run the Java server:
 
 ```bash
-javac UDPChatServer.java
-java UDPChatServer
+javac Server.java
+java Server
 ```
 
 3. Make sure the server and clients are on the **same local Wi-Fi network**.
