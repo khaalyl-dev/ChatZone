@@ -14,9 +14,9 @@ ChatZone is a simple local chat application built with Android (Java) and a Java
 
 ## 📷 Screenshots
 
-| Chat UI | Image Message |
+| Login Interface | Chat Interface |
 |--------|----------------|
-| ![chat_ui](screenshots/chat_ui.png) | ![image_message](screenshots/image_message.png) |
+| ![chat_ui](screenshots/Login_Interface.png) | ![image_message](screenshots/Chat_Interface.png) |
 
 ---
 
