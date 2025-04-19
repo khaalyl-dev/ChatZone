@@ -43,9 +43,11 @@ ChatZone/
 │   │   ├── ChatBox.java
 │   │   ├── ChatAdapter.java
 │   │   ├── ChatMessage.java
+│   │   ├── MainActivity.java
 │   ├── res/layout/
-│   │   ├── activity_chat_box.xml
+│   │   ├── chat_box.xml
 │   │   ├── chat_message_item.xml
+│   │   ├── Activity_main.xml
 ├── server/
 │   └── UDPChatServer.java
 ├── README.md
