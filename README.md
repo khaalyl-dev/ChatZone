@@ -104,17 +104,6 @@ serverAddress = InetAddress.getByName("192.168.1.100"); // Replace with your ser
 
 ---
 
-## 💡 Future Improvements
-
-- Switch to TCP for reliable messaging  
-- Add username/nickname support  
-- Push notifications  
-- File transfer  
-- End-to-end encryption  
-
-
----
-
 ## 🔧 Server Description
 The server is a core component of the ChatZone local chat application. It acts as a central message broker that manages communication between multiple Android clients connected over the same local Wi-Fi network. Built using Java, the server performs the following key roles:
 
