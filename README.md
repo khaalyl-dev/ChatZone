@@ -74,7 +74,7 @@ java Server
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/chatzone.git
+https://github.com/khaalyl-dev/ChatZone.git
 ```
 
 2. Open the project in **Android Studio**.  
